@@ -4,8 +4,7 @@ import router from "./router";
 import store from "./store";
 import Mapboxgl from "mapbox-gl";
 
-Mapboxgl.accessToken =
-  "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNqajA2c3phbDA0aXczcHF3bnBz";
+Mapboxgl.accessToken = process.env.VUE_APP_ACCESS_TOKEN;
 
 if (!navigator.geolocation) {
   throw new Error("Browser doesnt support GeoLocation");
